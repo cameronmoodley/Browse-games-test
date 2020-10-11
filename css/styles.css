@@ -57,10 +57,6 @@ header ul li a {
   font-weight: 300;
   text-transform: uppercase;
 }
-header ul li a:hover {
-  background: grey;
-  transition: 0.5s;
-}
 
 header .menu-toggle {
   display: none;
@@ -71,7 +67,7 @@ header ul li ul {
   top: 70px;
   background-color: lightgrey;
   right: 0px;
-  width: 155px;
+  width: 156px;
   display: none;
 }
 
@@ -97,16 +93,98 @@ header ul li ul li a {
   color: #ffffff;
 }
 
-header ul li ul li a.logout {
-  color: #7a2732;
+ul > li > a:hover {
+  color: #ffffff;
+  position: relative;
 }
 
-header ul li ul li a.logout:hover {
-  color: white;
-  background: #7a2732;
+ul > li > a::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #ffffff;
+
+  transform: scaleX(0);
+  transform-origin: bottom left;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transition: ease-in 300ms;
 }
 
-header ul li ul li a:hover {
-  color: #393939;
-  background: #ffffff;
+ul > li > a:hover::before {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+ul > li > a.logout::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #b0121e;
+
+  transform: scaleX(0);
+  transform-origin: bottom left;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transition: ease-in 200ms;
+}
+
+ul > li > a.logout:hover::before {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 890px) {
+  header {
+    position: relative;
+  }
+
+  header ul {
+    width: 100%;
+    background-color: #393939;
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .showing {
+    max-height: 100em;
+  }
+
+  header ul li {
+    width: 100%;
+  }
+
+  header ul li ul {
+    display: block;
+    width: 100%;
+    display: static;
+  }
+
+  header ul li ul li a {
+    padding: 10px;
+    background: #393939;
+    color: #ffffff;
+    padding-left: 80px;
+  }
+
+  header .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  header .logo {
+    margin-left: 0.5em;
+  }
 }
