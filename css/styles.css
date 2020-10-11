@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Lato:wght@100;300;700;900&family=Roboto:wght@100;300;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: grey;
+  padding: 0px;
+  margin: 0px;
+}
+
+header * {
+  color: #ffffff;
+}
+
+header {
+  background: #393939;
+  height: 70px;
+}
+
+header .logo {
+  float: left;
+  height: inherit;
+  margin-left: 2em;
+}
+
+header .logo-text {
+  margin: 8px;
+  font-family: "Bungee Hairline", cursive;
+  font-size: 3rem;
+}
+
+header .logo-text span {
+  color: #5e7663;
+}
+
+header ul {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  position: relative;
+}
+
+header ul li a {
+  display: block;
+  padding: 26px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+header ul li a:hover {
+  background: grey;
+  transition: 0.5s;
+}
+
+header .menu-toggle {
+  display: none;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 70px;
+  background-color: lightgrey;
+  right: 0px;
+  width: 155px;
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+
+.down-icon {
+  font-size: 0.7rem;
+}
+
+.user-icon {
+  font-size: 0.8rem;
+}
+
+header ul li ul li {
+  width: 100%;
+}
+
+header ul li ul li a {
+  padding: 10px;
+  background: #393939;
+  color: #ffffff;
+}
+
+header ul li ul li a.logout {
+  color: #7a2732;
+}
+
+header ul li ul li a.logout:hover {
+  color: white;
+  background: #7a2732;
+}
+
+header ul li ul li a:hover {
+  color: #393939;
+  background: #ffffff;
+}
