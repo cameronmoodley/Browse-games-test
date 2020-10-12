@@ -17,12 +17,17 @@
   <body>
     <!--Header-->
     <header>
-      <div class="logo">
-        <h1 class="logo-text"><span>G</span>H</h1>
-      </div>
       <nav class="navbar">
-        <i class="fa fa-bars menu-toggle"></i>
-        <ul class="nav">
+        <div class="logo">
+          <h1 class="logo-text"><span>G</span>H</h1>
+        </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="navbar-links">
+        <ul>
           <li><a href="#">Browse</a></li>
           <li><a href="#">Sell Games</a></li>
           <li><a href="#">Membership</a></li>
@@ -30,7 +35,7 @@
           <li><a href="#">FAQ</a></li>
           <!-- <li><a href="#">Sign Up</a></li>
         <li><a href="#">Login</a></li> -->
-          <li>
+          <li class="username">
             <a href="#">
               <i class="fa fa-user user-icon"></i>
               Xentraz
@@ -44,11 +49,9 @@
             </ul>
           </li>
         </ul>
+      </div>
       </nav>
     </header>
-
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Custom Script -->
     <script src="js/scripts.js"></script>

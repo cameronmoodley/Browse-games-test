@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Lato:wght@100;300;400;700&family=Major+Mono+Display&family=Offside&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Offside&display=swap');
 
 * {
   box-sizing: border-box;
@@ -17,22 +17,20 @@ header * {
 header {
   background: #393939;
   height: 70px;
+  display: block;
+  /* border-radius: 0 0 10px 10px; */
 }
 
 header .logo {
   float: left;
   height: inherit;
   margin-left: 2em;
-  box-sizing: border-box;
 }
 
 header .logo-text {
-  margin: 4px;
+  margin: 8px;
   font-family: 'Offside', cursive;
   font-size: 3rem;
-  padding-top: 0;
-  font-weight: lighter;
-  letter-spacing: 3px;
 }
 
 header .logo-text span {
@@ -68,7 +66,7 @@ header .menu-toggle {
 
 header ul li ul {
   position: absolute;
-  top: 70px;
+  top: 69px;
   background-color: lightgrey;
   right: 0px;
   width: 156px;
@@ -77,7 +75,9 @@ header ul li ul {
 
 header ul li:hover ul {
   display: block;
+  position: absolute;
 }
+
 
 .down-icon {
   font-size: 0.7rem;
@@ -144,22 +144,48 @@ ul > li > a.logout:hover::before {
   transform: scaleX(1);
 }
 
+.toggle-button {
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button span {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+
 /* Media Queries */
 
-@media only screen and (max-width: 890px) {
-  header {
-    position: relative;
+@media (max-width: 890px) {
+
+  .toggle-button {
+    display: flex;
   }
 
-  header ul {
+  header {
+    position: relative;
+    padding-bottom: 0mm;
+  }
+
+  
+  .navbar-links {
     width: 100%;
     background-color: #393939;
     max-height: 0px;
-    overflow: hidden;
+    display: none;
   }
 
-  .showing {
-    max-height: 100em;
+  .navbar-links.active {
+    display: block;
   }
 
   header ul li {
@@ -170,16 +196,18 @@ ul > li > a.logout:hover::before {
     display: block;
     width: 100%;
     display: static;
+
   }
 
   header ul li ul li a {
     padding: 10px;
     background: #393939;
     color: #ffffff;
-    padding-left: 80px;
+    padding-left: 25px;
+    text-align: left;
   }
 
-  header .menu-toggle {
+  header .usernaame {
     display: block;
     position: absolute;
     right: 20px;
@@ -190,5 +218,7 @@ ul > li > a.logout:hover::before {
 
   header .logo {
     margin-left: 0.5em;
-  }
+  } 
+
+  
 }
