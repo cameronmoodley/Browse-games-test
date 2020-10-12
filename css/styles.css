@@ -165,7 +165,7 @@ ul > li > a.logout:hover::before {
 
 /* Media Queries */
 
-@media (max-width: 890px) {
+@media (max-width: 886px) {
 
   .toggle-button {
     display: flex;
@@ -175,7 +175,15 @@ ul > li > a.logout:hover::before {
     position: relative;
     padding-bottom: 0mm;
   }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  header .logo {
+    position: relative;
+  }
   
   .navbar-links {
     width: 100%;
@@ -190,13 +198,14 @@ ul > li > a.logout:hover::before {
 
   header ul li {
     width: 100%;
+    float: left;
+    background-color: #393939;
   }
 
   header ul li ul {
     display: block;
     width: 100%;
     display: static;
-
   }
 
   header ul li ul li a {
@@ -220,5 +229,8 @@ ul > li > a.logout:hover::before {
     margin-left: 0.5em;
   } 
 
-  
+  .dropdown {
+    display: none;
+  }
+
 }
