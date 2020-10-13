@@ -1,6 +1,10 @@
+// Use id's instead classes, classes return an Array, you want a single element.
 const toggleButton = document.getElementsByClassName("toggle-button")[0];
 const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 
+// create a close function
+// use if else to see if the class is on the div
+// if it is remove the class, if its not add the class
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
